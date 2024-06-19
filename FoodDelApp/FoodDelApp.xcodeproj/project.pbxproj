@@ -10,6 +10,11 @@
 		22348E462C235BC60038A42F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E452C235BC60038A42F /* Coordinator.swift */; };
 		22348E482C2362610038A42F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E472C2362610038A42F /* AppCoordinator.swift */; };
 		22348E4A2C2364B80038A42F /* OnboardingCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E492C2364B80038A42F /* OnboardingCoordinate.swift */; };
+		22348E4E2C236BC60038A42F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E4D2C236BC60038A42F /* HomeCoordinator.swift */; };
+		22348E502C236C0C0038A42F /* OrderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E4F2C236C0C0038A42F /* OrderCoordinator.swift */; };
+		22348E522C236CD20038A42F /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E512C236CD20038A42F /* ListCoordinator.swift */; };
+		22348E542C236D980038A42F /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E532C236D980038A42F /* ProfileCoordinator.swift */; };
+		22348E562C236DC90038A42F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E552C236DC90038A42F /* TabBarController.swift */; };
 		22EBBEEC2C14F02100B62A50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEEB2C14F02100B62A50 /* AppDelegate.swift */; };
 		22EBBEEE2C14F02100B62A50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEED2C14F02100B62A50 /* SceneDelegate.swift */; };
 		22EBBEF02C14F02100B62A50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEEF2C14F02100B62A50 /* ViewController.swift */; };
@@ -37,6 +42,11 @@
 		22348E452C235BC60038A42F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		22348E472C2362610038A42F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		22348E492C2364B80038A42F /* OnboardingCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinate.swift; sourceTree = "<group>"; };
+		22348E4D2C236BC60038A42F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		22348E4F2C236C0C0038A42F /* OrderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCoordinator.swift; sourceTree = "<group>"; };
+		22348E512C236CD20038A42F /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
+		22348E532C236D980038A42F /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		22348E552C236DC90038A42F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		22EBBEE82C14F02100B62A50 /* FoodDelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EBBEEB2C14F02100B62A50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22EBBEED2C14F02100B62A50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +95,7 @@
 		22348E432C235BA40038A42F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				22348E552C236DC90038A42F /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,6 +106,10 @@
 				22348E452C235BC60038A42F /* Coordinator.swift */,
 				22348E472C2362610038A42F /* AppCoordinator.swift */,
 				22348E492C2364B80038A42F /* OnboardingCoordinate.swift */,
+				22348E4D2C236BC60038A42F /* HomeCoordinator.swift */,
+				22348E4F2C236C0C0038A42F /* OrderCoordinator.swift */,
+				22348E512C236CD20038A42F /* ListCoordinator.swift */,
+				22348E532C236D980038A42F /* ProfileCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -267,7 +282,12 @@
 				22EBBF242C151E8200B62A50 /* AppColors.swift in Sources */,
 				22348E482C2362610038A42F /* AppCoordinator.swift in Sources */,
 				22EBBEEE2C14F02100B62A50 /* SceneDelegate.swift in Sources */,
+				22348E502C236C0C0038A42F /* OrderCoordinator.swift in Sources */,
 				22EBBF222C151D8A00B62A50 /* UIColor+Extension.swift in Sources */,
+				22348E542C236D980038A42F /* ProfileCoordinator.swift in Sources */,
+				22348E522C236CD20038A42F /* ListCoordinator.swift in Sources */,
+				22348E4E2C236BC60038A42F /* HomeCoordinator.swift in Sources */,
+				22348E562C236DC90038A42F /* TabBarController.swift in Sources */,
 				22348E462C235BC60038A42F /* Coordinator.swift in Sources */,
 				22348E4A2C2364B80038A42F /* OnboardingCoordinate.swift in Sources */,
 			);
