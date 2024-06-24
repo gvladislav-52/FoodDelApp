@@ -17,6 +17,7 @@
 		22348E562C236DC90038A42F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E552C236DC90038A42F /* TabBarController.swift */; };
 		22348E5C2C242A580038A42F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E5B2C242A580038A42F /* OnboardingViewController.swift */; };
 		22348E5E2C242A980038A42F /* OnboardingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E5D2C242A980038A42F /* OnboardingViewPresenter.swift */; };
+		22348E602C2998BD0038A42F /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E5F2C2998BD0038A42F /* OnboardingPartViewController.swift */; };
 		22EBBEEC2C14F02100B62A50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEEB2C14F02100B62A50 /* AppDelegate.swift */; };
 		22EBBEEE2C14F02100B62A50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEED2C14F02100B62A50 /* SceneDelegate.swift */; };
 		22EBBEF02C14F02100B62A50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEEF2C14F02100B62A50 /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 		22348E552C236DC90038A42F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		22348E5B2C242A580038A42F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		22348E5D2C242A980038A42F /* OnboardingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPresenter.swift; sourceTree = "<group>"; };
+		22348E5F2C2998BD0038A42F /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
 		22EBBEE82C14F02100B62A50 /* FoodDelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EBBEEB2C14F02100B62A50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22EBBEED2C14F02100B62A50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				22348E5B2C242A580038A42F /* OnboardingViewController.swift */,
 				22348E5D2C242A980038A42F /* OnboardingViewPresenter.swift */,
+				22348E5F2C2998BD0038A42F /* OnboardingPartViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				22348E522C236CD20038A42F /* ListCoordinator.swift in Sources */,
 				22348E4E2C236BC60038A42F /* HomeCoordinator.swift in Sources */,
 				22348E562C236DC90038A42F /* TabBarController.swift in Sources */,
+				22348E602C2998BD0038A42F /* OnboardingPartViewController.swift in Sources */,
 				22348E462C235BC60038A42F /* Coordinator.swift in Sources */,
 				22348E5E2C242A980038A42F /* OnboardingViewPresenter.swift in Sources */,
 				22348E4A2C2364B80038A42F /* OnboardingCoordinate.swift in Sources */,
