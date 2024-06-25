@@ -28,6 +28,8 @@ class OnboardingPartViewController: UIViewController {
         }
     }
     
+    var buttonText: String?
+    
     //MARK: - Views
     private let imageView = UIImageView()
     private let titleLabel = UILabel()
