@@ -18,7 +18,7 @@ class OnboardingCoordinator: Coordinator {
 
 private extension OnboardingCoordinator {
     func showOnboarding() {
-        var pages = [UIViewController]()
+        var pages = [OnboardingPartViewController]()
         let firstVC = OnboardingPartViewController()
         firstVC.imageToShow = UIImage(imageLiteralResourceName: "chicken-leg 1")
         firstVC.titleText = String("Delicious Food")
