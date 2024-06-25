@@ -17,7 +17,7 @@ class OnboardingViewController: UIViewController {
     private let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     private let pageControl = UIPageControl ()
     private let bottomButton = UIButton()
-    weak var viewOutput: OnboardingViewOutput!
+    var viewOutput: OnboardingViewOutput!
     
     init(pages: [OnboardingPartViewController] = [OnboardingPartViewController](), viewOutput: OnboardingViewOutput!) {
         self.pages = pages
@@ -51,6 +51,7 @@ private extension OnboardingViewController {
             bottomButton.setTitle(pages[3].buttonText, for: .normal)
         case 3:
             print("Exit")
+            viewOutput.onboardingFinish()
         default:
             break
         }
@@ -97,7 +98,7 @@ private extension OnboardingViewController {
         bottomButton.backgroundColor = AppColors.gray
         bottomButton.titleLabel?.font = .Roboto.bold.size(of: 18)
         bottomButton.setTitleColor(.black, for: .normal)
-        bottomButton.layer.cornerRadius = 16
+        bottomButton.layer.cornerRadius = 24
         
         bottomButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

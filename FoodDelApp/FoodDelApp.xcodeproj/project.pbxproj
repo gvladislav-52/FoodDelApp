@@ -18,6 +18,7 @@
 		22348E5C2C242A580038A42F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E5B2C242A580038A42F /* OnboardingViewController.swift */; };
 		22348E5E2C242A980038A42F /* OnboardingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E5D2C242A980038A42F /* OnboardingViewPresenter.swift */; };
 		22348E602C2998BD0038A42F /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22348E5F2C2998BD0038A42F /* OnboardingPartViewController.swift */; };
+		2299E0162C2B1BFA00A2332F /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2299E0152C2B1BFA00A2332F /* UserStorage.swift */; };
 		22EBBEEC2C14F02100B62A50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEEB2C14F02100B62A50 /* AppDelegate.swift */; };
 		22EBBEEE2C14F02100B62A50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEED2C14F02100B62A50 /* SceneDelegate.swift */; };
 		22EBBEF02C14F02100B62A50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEEF2C14F02100B62A50 /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		22348E5B2C242A580038A42F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		22348E5D2C242A980038A42F /* OnboardingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPresenter.swift; sourceTree = "<group>"; };
 		22348E5F2C2998BD0038A42F /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
+		2299E0152C2B1BFA00A2332F /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		22EBBEE82C14F02100B62A50 /* FoodDelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EBBEEB2C14F02100B62A50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22EBBEED2C14F02100B62A50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		2299E0142C2B1BCA00A2332F /* ServicesLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2299E0152C2B1BFA00A2332F /* UserStorage.swift */,
+			);
+			path = ServicesLayer;
+			sourceTree = "<group>";
+		};
 		22EBBEDF2C14F02000B62A50 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 		22EBBEEA2C14F02100B62A50 /* FoodDelApp */ = {
 			isa = PBXGroup;
 			children = (
+				2299E0142C2B1BCA00A2332F /* ServicesLayer */,
 				22348E572C2429C50038A42F /* UILayer */,
 				22348E422C235B860038A42F /* NavigationLayer */,
 				22EBBEFF2C14FBA900B62A50 /* Resources */,
@@ -315,6 +326,7 @@
 				22348E4E2C236BC60038A42F /* HomeCoordinator.swift in Sources */,
 				22348E562C236DC90038A42F /* TabBarController.swift in Sources */,
 				22348E602C2998BD0038A42F /* OnboardingPartViewController.swift in Sources */,
+				2299E0162C2B1BFA00A2332F /* UserStorage.swift in Sources */,
 				22348E462C235BC60038A42F /* Coordinator.swift in Sources */,
 				22348E5E2C242A980038A42F /* OnboardingViewPresenter.swift in Sources */,
 				22348E4A2C2364B80038A42F /* OnboardingCoordinate.swift in Sources */,
