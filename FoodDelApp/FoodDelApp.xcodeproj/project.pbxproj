@@ -21,6 +21,7 @@
 		2270E1232C2C07ED00A90D1C /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270E1222C2C07ED00A90D1C /* SceneFactory.swift */; };
 		2270E1262C2C21ED00A90D1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270E1252C2C21ED00A90D1C /* LoginViewController.swift */; };
 		2270E12B2C2C26FF00A90D1C /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270E12A2C2C26FF00A90D1C /* BottomView.swift */; };
+		2270E1302C2DC36500A90D1C /* FoodDeliveryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270E12F2C2DC36500A90D1C /* FoodDeliveryButton.swift */; };
 		2299E0162C2B1BFA00A2332F /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2299E0152C2B1BFA00A2332F /* UserStorage.swift */; };
 		22EBBEEC2C14F02100B62A50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEEB2C14F02100B62A50 /* AppDelegate.swift */; };
 		22EBBEEE2C14F02100B62A50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBBEED2C14F02100B62A50 /* SceneDelegate.swift */; };
@@ -60,6 +61,7 @@
 		2270E1222C2C07ED00A90D1C /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		2270E1252C2C21ED00A90D1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2270E12A2C2C26FF00A90D1C /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		2270E12F2C2DC36500A90D1C /* FoodDeliveryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryButton.swift; sourceTree = "<group>"; };
 		2299E0152C2B1BFA00A2332F /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		22EBBEE82C14F02100B62A50 /* FoodDelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EBBEEB2C14F02100B62A50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,9 +133,9 @@
 		22348E572C2429C50038A42F /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
-				2270E1212C2C07BF00A90D1C /* SceneFactory */,
-				2270E1242C2C217D00A90D1C /* AuthScene */,
-				22348E582C2429F20038A42F /* OnboardingScene */,
+				2270E12E2C2DC2F900A90D1C /* Scenes */,
+				2270E12D2C2DC2E000A90D1C /* Factory */,
+				2270E12C2C2DC2CF00A90D1C /* Views */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -187,6 +189,31 @@
 			children = (
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		2270E12C2C2DC2CF00A90D1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2270E12F2C2DC36500A90D1C /* FoodDeliveryButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2270E12D2C2DC2E000A90D1C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				2270E1212C2C07BF00A90D1C /* SceneFactory */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		2270E12E2C2DC2F900A90D1C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				22348E582C2429F20038A42F /* OnboardingScene */,
+				2270E1242C2C217D00A90D1C /* AuthScene */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		2299E0142C2B1BCA00A2332F /* ServicesLayer */ = {
@@ -380,6 +407,7 @@
 				2270E1232C2C07ED00A90D1C /* SceneFactory.swift in Sources */,
 				22348E462C235BC60038A42F /* Coordinator.swift in Sources */,
 				2270E12B2C2C26FF00A90D1C /* BottomView.swift in Sources */,
+				2270E1302C2DC36500A90D1C /* FoodDeliveryButton.swift in Sources */,
 				22348E5E2C242A980038A42F /* OnboardingViewPresenter.swift in Sources */,
 				22348E4A2C2364B80038A42F /* OnboardingCoordinate.swift in Sources */,
 			);

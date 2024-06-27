@@ -16,7 +16,7 @@ class OnboardingViewController: UIViewController {
     //MARK: - Views
     private let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     private let pageControl = UIPageControl ()
-    private let bottomButton = UIButton()
+    private let bottomButton = FoodDeliveryButton()
     var viewOutput: OnboardingViewOutput!
     
     init(pages: [OnboardingPartViewController] = [OnboardingPartViewController](), viewOutput: OnboardingViewOutput!) {
@@ -48,7 +48,7 @@ private extension OnboardingViewController {
         case 2:
             pageControl.currentPage = 3
             pageViewController.setViewControllers([pages[3]], direction: .forward, animated: true, completion: nil)
-            bottomButton.setTitle(pages[3].buttonText, for: .normal)
+            bottomButton.setTitle(pages[3].buttonText)
         case 3:
             print("Exit")
             viewOutput.onboardingFinish()
@@ -80,7 +80,7 @@ private extension OnboardingViewController {
         pageControl.currentPage = 0
         let page = pages[0]
         let title = page.buttonText
-        bottomButton.setTitle(title, for: .normal)
+        bottomButton.setTitle(title)
         
         
         pageControl.translatesAutoresizingMaskIntoConstraints = false
@@ -94,21 +94,15 @@ private extension OnboardingViewController {
     }
     func setupButton() {
         view.addSubview(bottomButton)
-        
-        bottomButton.backgroundColor = AppColors.gray
-        bottomButton.titleLabel?.font = .Roboto.bold.size(of: UIScreen.main.bounds.width * 0.05)
-        bottomButton.setTitleColor(.black, for: .normal)
-        bottomButton.layer.cornerRadius = UIScreen.main.bounds.width *  0.0625
-        
         bottomButton.translatesAutoresizingMaskIntoConstraints = false
+        bottomButton.action = buttonPressed
+        bottomButton.scheme = .gray
         NSLayoutConstraint.activate([
             bottomButton.bottomAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: -UIScreen.main.bounds.height * 0.06),
             bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: UIScreen.main.bounds.width * 0.08),
             bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -UIScreen.main.bounds.width * 0.08),
             bottomButton.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.07)
         ])
-        
-        bottomButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
 }
 
@@ -143,7 +137,7 @@ extension OnboardingViewController: UIPageViewControllerDelegate {
             pageControl.currentPage = currentPageIndex
             let page = pages[currentPageIndex]
             let title = page.buttonText
-            bottomButton.setTitle(title, for: .normal)
+            bottomButton.setTitle(title)
         }
     }
 }
