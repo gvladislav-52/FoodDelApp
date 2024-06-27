@@ -42,7 +42,7 @@ private extension LoginViewController {
             bottomView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             bottomView.leadingAnchor.constraint(equalTo:self.view.leadingAnchor),
             bottomView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            bottomView.heightAnchor.constraint(equalToConstant: 150)
+            bottomView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.18)
         ])
     }
     
