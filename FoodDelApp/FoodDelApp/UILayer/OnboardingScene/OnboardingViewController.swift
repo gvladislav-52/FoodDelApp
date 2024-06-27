@@ -89,23 +89,23 @@ private extension OnboardingViewController {
         
         NSLayoutConstraint.activate([
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant:  -45)
+            pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant:  -UIScreen.main.bounds.height * 0.04)
         ])
     }
     func setupButton() {
         view.addSubview(bottomButton)
         
         bottomButton.backgroundColor = AppColors.gray
-        bottomButton.titleLabel?.font = .Roboto.bold.size(of: 18)
+        bottomButton.titleLabel?.font = .Roboto.bold.size(of: UIScreen.main.bounds.width * 0.05)
         bottomButton.setTitleColor(.black, for: .normal)
-        bottomButton.layer.cornerRadius = 24
+        bottomButton.layer.cornerRadius = UIScreen.main.bounds.width *  0.0625
         
         bottomButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            bottomButton.bottomAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: -44),
-            bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            bottomButton.heightAnchor.constraint(equalToConstant: 50)
+            bottomButton.bottomAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: -UIScreen.main.bounds.height * 0.06),
+            bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: UIScreen.main.bounds.width * 0.08),
+            bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -UIScreen.main.bounds.width * 0.08),
+            bottomButton.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.07)
         ])
         
         bottomButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
