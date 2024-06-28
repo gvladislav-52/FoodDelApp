@@ -43,7 +43,7 @@ private extension FoodDeliveryButton {
         self.addSubview(button)
         
         button.titleLabel?.font = .Roboto.bold.size(of: UIScreen.main.bounds.width * 0.05)
-        button.layer.cornerRadius = UIScreen.main.bounds.width *  0.0625
+        button.layer.cornerRadius = UIScreen.main.bounds.width *  0.055
         
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

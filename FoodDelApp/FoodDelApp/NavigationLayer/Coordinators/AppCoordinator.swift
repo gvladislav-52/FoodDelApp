@@ -23,7 +23,7 @@ class AppCoordinator: Coordinator {
 //            showOnBoardingFlow()
 //        }
         let loginPresenter = LoginPresenter(coordinator: self)
-        let loginVC = LoginViewController(viewOutput: loginPresenter)
+        let loginVC = LoginViewController(viewOutput: loginPresenter, state: .initial)
         navigationController?.pushViewController(loginVC, animated: true)
     }
     override func finish() {

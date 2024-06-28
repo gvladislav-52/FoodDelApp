@@ -28,8 +28,11 @@ class LoginViewController: UIViewController {
     weak var viewOutput: LoginViewOutput!
     
     //MARK: - Views
-    private let bottomView = FDBottomView()
-    private let textField = FoodDeliveryTextField()
+    private lazy var bottomView = FDBottomView()
+    private lazy var textField = FoodDeliveryTextField()
+    private lazy var logoView = UIImageView()
+    private lazy var signInButton = FoodDeliveryButton()
+    private lazy var signUpButton = FoodDeliveryButton()
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -39,8 +42,9 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: - Initializers
-    init(viewOutput: LoginViewOutput) {
+    init(viewOutput: LoginViewOutput, state: LoginViewState) {
         self.viewOutput = viewOutput
+        self.state = state
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -59,8 +63,19 @@ class LoginViewController: UIViewController {
 
 private extension LoginViewController {
     private func setupLayout() {
-        setupBottomView()
-        setupTextField()
+        switch state {
+        case .initial:
+            setupBottomView()
+            setupLogoImage()
+            setupSignInButton()
+            setupSignUpButton()
+        case .signIn:
+            setupBottomView()
+            setupTextField()
+        case .signUp:
+            setupBottomView()
+            setupTextField()
+        }
     }
     private func setupBottomView() {
         view.addSubview(bottomView)
@@ -86,6 +101,48 @@ private extension LoginViewController {
             textField.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.07),
             textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: UIScreen.main.bounds.width * 0.08),
             textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -UIScreen.main.bounds.width * 0.08),
+        ])
+    }
+    
+    func setupLogoImage() {
+        view.addSubview(logoView)
+        logoView.translatesAutoresizingMaskIntoConstraints = false
+        logoView.image = UIImage(named: "appstore")
+        logoView.contentMode = .scaleAspectFit
+        
+        NSLayoutConstraint.activate([
+            logoView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: UIScreen.main.bounds.height * 0.15),
+            logoView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: UIScreen.main.bounds.width * 0.05),
+            logoView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -UIScreen.main.bounds.width * 0.05),
+            logoView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.35)
+        ])
+    }
+    func setupSignInButton() {
+        view.addSubview(signInButton)
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        //signInButton.action = buttonPressed
+        signInButton.scheme = .orange
+        signInButton.setTitle("Sign In")
+        
+        NSLayoutConstraint.activate([
+            signInButton.topAnchor.constraint(equalTo: logoView.bottomAnchor, constant: UIScreen.main.bounds.height * 0.07),
+            signInButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: UIScreen.main.bounds.width * 0.08),
+            signInButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -UIScreen.main.bounds.width * 0.08),
+            signInButton.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.065)
+        ])
+    }
+    func setupSignUpButton() {
+        view.addSubview(signUpButton)
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false
+        //signInButton.action = buttonPressed
+        signUpButton.scheme = .gray
+        signUpButton.setTitle("Sign Up")
+        
+        NSLayoutConstraint.activate([
+            signUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: UIScreen.main.bounds.height * 0.025),
+            signUpButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: UIScreen.main.bounds.width * 0.08),
+            signUpButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -UIScreen.main.bounds.width * 0.08),
+            signUpButton.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.065)
         ])
     }
     
