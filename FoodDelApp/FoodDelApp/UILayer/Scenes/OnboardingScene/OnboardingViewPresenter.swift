@@ -22,7 +22,7 @@ class OnboardingViewPresenter: OnboardingViewOutput {
     }
     
     func onboardingFinish() {
-        userStorage.passedOnboarding = false
+        userStorage.passedOnboarding = true
         coordinator.finish()
         
     }
