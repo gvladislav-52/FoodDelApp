@@ -16,14 +16,15 @@ class AppCoordinator: Coordinator {
     
     //MARK: - Methods
     override func start() {
-        UserDefaults.standard.removeObject(forKey: "passedOnboarding")
-        if userStorage.passedOnboarding {
-            showMainFlow()
-        } else {
-            showOnBoardingFlow()
-        }
-//        let loginVC = LoginViewController()
-//        navigationController?.pushViewController(loginVC, animated: true)
+//        UserDefaults.standard.removeObject(forKey: "passedOnboarding")
+//        if userStorage.passedOnboarding {
+//            showMainFlow()
+//        } else {
+//            showOnBoardingFlow()
+//        }
+        let loginPresenter = LoginPresenter(coordinator: self)
+        let loginVC = LoginViewController(viewOutput: loginPresenter)
+        navigationController?.pushViewController(loginVC, animated: true)
     }
     override func finish() {
         print("AppCoordinator finish")
