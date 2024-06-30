@@ -52,14 +52,22 @@ private extension FoodDeliveryButton {
             button.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             button.topAnchor.constraint(equalTo: self.topAnchor)
         ])
-        
-        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchDown)
+        button.addTarget(self, action: #selector(buttonReleased), for: .touchUpInside)
     }
     
-    @objc private func buttonPressed() {
-        guard let action = self.action else {return}
-        action()
+    @objc func buttonPressed() {
+        UIView.animate(withDuration: 0.1) {
+            self.button.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }
     }
+
+    @objc func buttonReleased() {
+        UIView.animate(withDuration: 0.1) {
+            self.button.transform = .identity
+        }
+    }
+
     
     private func setColorScheme(scheme: FDButtonColorSchemes) {
         switch scheme {
