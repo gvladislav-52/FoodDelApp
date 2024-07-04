@@ -31,7 +31,9 @@ extension CoordinatorProtocol {
     }
     
     func removeChildCoordinator(_ childCoordinator: CoordinatorProtocol) {
+        print(childCoordinators)
         childCoordinators = childCoordinators.filter{$0 !== childCoordinator}
+        print(childCoordinators)
     }
 }
 

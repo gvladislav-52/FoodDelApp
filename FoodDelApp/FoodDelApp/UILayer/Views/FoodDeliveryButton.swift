@@ -57,15 +57,18 @@ private extension FoodDeliveryButton {
     }
     
     @objc func buttonPressed() {
-        UIView.animate(withDuration: 0.1) {
+        UIView.animate(withDuration: 0.05) {
             self.button.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }
+
     }
 
     @objc func buttonReleased() {
-        UIView.animate(withDuration: 0.1) {
+        UIView.animate(withDuration: 0.05) {
             self.button.transform = .identity
         }
+        guard let action = self.action else {return}
+        action()
     }
 
     
